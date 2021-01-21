@@ -10,15 +10,19 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Muslim Society of Guelph"),
+        title: Text('Muslim Society of Guelph'),
+        flexibleSpace: CircleAvatar(
+          backgroundImage: AssetImage('images/logoBack.png'),
+        ),
         centerTitle: true,
       ),
       //Side menu (Drawer)
       drawer: Drawer(
+
         child: ListView(
           children: <Widget>[
             ListTile(
-              title: Text("About Us"),
+              title: Text('About Us'),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.push(context, MaterialPageRoute(
@@ -31,7 +35,7 @@ class Home extends StatelessWidget {
               height: 5,
             ),
             ListTile(
-              title: Text("Events"),
+              title: Text('Events'),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.push(context, MaterialPageRoute(
@@ -44,7 +48,7 @@ class Home extends StatelessWidget {
               height: 5,
             ),
             ListTile(
-              title: Text("Blogs"),
+              title: Text('Blogs'),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.push(context, MaterialPageRoute(
@@ -58,7 +62,7 @@ class Home extends StatelessWidget {
             ),
 
             ListTile(
-              title: Text("Contact"),
+              title: Text('Contact'),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.push(context, MaterialPageRoute(
@@ -71,7 +75,7 @@ class Home extends StatelessWidget {
               height: 5,
             ),
             ListTile(
-              title: Text("Donate"),
+              title: Text('Donate'),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.push(context, MaterialPageRoute(
@@ -86,7 +90,7 @@ class Home extends StatelessWidget {
           ],
         ),
       ),
-      body: Text("Hello World!"),
+      body: Text('Hello World!'),
 
     );
   }
